@@ -15,7 +15,25 @@ const routes =  [
     path: "/add",
     name: "add-explorer",
     component: () => import("./components/AddExplorer")
+  },
+
+  {
+    path: "/",
+    alias: "/mc",
+    name: "mc",
+    component: () => import("./components/MissionCommanderList")
+  },
+  {
+    path: "/mc/:id",
+    name: "mc-details",
+    component: () => import("./components/MissionCommander")
+  },
+  {
+    path: "/mc/add",
+    name: "add-mc",
+    component: () => import("./components/AddMissionCommander")
   }
+
 ];
 const router = createRouter({
   history: createWebHistory(),
